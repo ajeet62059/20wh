@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Open Multiple Tabs and Search Example</title>
+  </head>
+  <body>
+    <button onclick="openTabs()">Open Multiple Tabs and Search</button>
+
+    <script>
+      function openTabs() {
+        // URLs to open in new tabs
+        const urls = [
+          "https://www.bing.com/search?q=Indian+jewelry+designs",
+          "https://www.bing.com/search?q=Indian+theater+and+drama",
+          "https://www.bing.com/search?q=Indian+traditional+medicines",
+          "https://www.bing.com/search?q=Indian+cultural+diversity",
+          "https://www.bing.com/search?q=Indian+festivals+calendar",
+          "https://www.bing.com/search?q=Indian+independence+movement",
+          "https://www.bing.com/search?q=Indian+royal+heritage",
+          "https://www.bing.com/search?q=Indian+famous+painters",
+          "https://www.bing.com/search?q=Indian+music+and+dance+institutes",
+          "https://www.bing.com/search?q=Indian+culinary+heritage",
+          "https://www.bing.com/search?q=Indian+traditional+games",
+          "https://www.bing.com/search?q=Indian+fashion+and+designers",
+          "https://www.bing.com/search?q=Indian+classical+dance+forms",
+          "https://www.bing.com/search?q=Indian+sculpture+and+artifacts",
+          "https://www.bing.com/search?q=Indian+educational+institutions",
+          "https://www.bing.com/search?q=Indian+cultural+exhibitions",
+          "https://www.bing.com/search?q=Indian+architecture+styles",
+          "https://www.bing.com/search?q=Indian+historical+landmarks",
+          "https://www.bing.com/search?q=Indian+folk+music+genres",
+          "https://www.bing.com/search?q=Indian+traditional+healing+practices",
+        ];
+
+        // Function to open tabs with a delay
+        function openTabWithDelay(index) {
+          if (index < urls.length) {
+            window.open(urls[index], "_blank");
+            setTimeout(function () {
+              openTabWithDelay(index + 1);
+            }, 2000); // Open the next tab after a 1-second delay
+          }
+        }
+
+        openTabWithDelay(0); // Start opening tabs from the first URL
+      }
+    </script>
+  </body>
+</html>
